@@ -27,9 +27,9 @@
         }
         
         /* ===============================
-           FORM CONTAINER
+           FORM WRAPPER (sesuai HTML)
         ================================ */
-        .form-container {
+        .form-wrapper {
           width: 100%;
           max-width: 420px;
           background: #ffffff;
@@ -43,7 +43,7 @@
         /* ===============================
            TITLE
         ================================ */
-        .form-container h2 {
+        .title {
           margin: 0 0 24px;
           text-align: center;
           font-size: 22px;
@@ -52,9 +52,9 @@
         }
         
         /* ===============================
-           LABEL
+           LABEL & HINT
         ================================ */
-        label {
+        .label {
           display: block;
           text-align: center;
           font-size: 14px;
@@ -62,10 +62,7 @@
           margin-bottom: 6px;
         }
         
-        /* ===============================
-           HELPER TEXT (DESKRIPSI)
-        ================================ */
-        .helper-text {
+        .hint {
           text-align: center;
           font-size: 12.5px;
           color: #8e8e93;
@@ -73,9 +70,9 @@
         }
         
         /* ===============================
-           INPUT FIELD
+           INPUT APPLE STYLE
         ================================ */
-        input {
+        .input-apple {
           width: 100%;
           height: 46px;
           padding: 0 14px;
@@ -88,24 +85,48 @@
           transition: all 0.2s ease;
         }
         
-        input:focus {
+        .input-apple:focus {
           outline: none;
           border-color: #0a84ff;
           background: #ffffff;
           box-shadow: 0 0 0 4px rgba(10,132,255,0.15);
         }
         
-        /* Disabled field */
-        input:disabled {
+        .input-apple:disabled,
+        .input-apple[readonly] {
           background: #f2f2f7;
           color: #636366;
-          cursor: not-allowed;
         }
         
         /* ===============================
-           BUTTON
+           SEARCH RESULT (AUTOCOMPLETE)
         ================================ */
-        button {
+        #searchResult {
+          position: absolute;
+          width: 100%;
+          margin-top: 6px;
+          background: #ffffff;
+          border-radius: 12px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+          overflow: hidden;
+          z-index: 10;
+        }
+        
+        #searchResult div {
+          padding: 12px;
+          text-align: center;
+          font-size: 14px;
+          cursor: pointer;
+        }
+        
+        #searchResult div:hover {
+          background: #f2f2f7;
+        }
+        
+        /* ===============================
+           BUTTON APPLE STYLE
+        ================================ */
+        .btn-apple {
           width: 100%;
           height: 48px;
           border-radius: 14px;
@@ -116,32 +137,28 @@
           transition: all 0.2s ease;
         }
         
-        /* Reset button */
-        .btn-reset {
+        .btn-apple.secondary {
           background: #8e8e93;
           color: #ffffff;
           margin-bottom: 12px;
         }
         
-        .btn-reset:hover {
+        .btn-apple.secondary:hover {
           background: #6e6e73;
         }
         
-        /* Primary button */
-        .btn-primary {
+        .btn-apple.primary {
           background: linear-gradient(180deg, #0a84ff, #006be6);
           color: #ffffff;
         }
         
-        .btn-primary:hover {
+        .btn-apple.primary:hover {
           filter: brightness(1.05);
         }
         
-        /* Button active effect */
-        button:active {
+        .btn-apple:active {
           transform: scale(0.98);
         }
-
     </style>
 </head>
     
