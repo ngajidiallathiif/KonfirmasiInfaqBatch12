@@ -72,16 +72,29 @@
 
         <h4 class="text-center fw-bold mb-4">
             Form Konfirmasi Infaq<br>
-            NDA Reguler Batch 11
+            NDA Reguler Batch 12
         </h4>
 
         <!-- Nama Member -->
-        <label for="namaMember">Nama Member</label>
+        <label for="namaMember" class="fw-bold text-center d-block">
+            Nama Member
+        </label>
+        
+        <small class="text-muted d-block text-center mb-2">
+            Silakan ketik nama Anda, lalu pilih dari daftar yang muncul
+        </small>
+        
         <div style="position: relative;">
-            <input id="namaMember" type="text" class="form-control" autocomplete="off">
+            <input
+                id="namaMember"
+                type="text"
+                class="form-control text-center"
+                autocomplete="off"
+                placeholder="Contoh: Ahmad Fauzi"
+            >
             <div id="searchResult"></div>
         </div>
-
+        
         <label class="mt-3 text-center fw-bold">Nomor WhatsApp</label>
         <input id="nomorWA" class="form-control text-center" type="text" readonly>
         
@@ -185,6 +198,14 @@
                 "&entry.1421539763=" + mentor;
     
             window.location.href = url;
+        });
+
+        document.getElementById("submitBtn").addEventListener("click", function () {
+            if (!document.getElementById("nomorWA").value) {
+                alert("Silakan pilih nama dari daftar yang muncul.");
+                return;
+            }
+            // lanjut redirect
         });
     </script>
 
