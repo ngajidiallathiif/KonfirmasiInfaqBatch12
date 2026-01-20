@@ -56,6 +56,13 @@
         #searchResult div:hover {
             background: #e9ecef;
         }
+
+        /* Read Only */
+        input[readonly] {
+            background-color: #f8f9fa;
+            cursor: not-allowed;
+        }
+
     </style>
 </head>
 
@@ -75,17 +82,17 @@
             <div id="searchResult"></div>
         </div>
 
-        <label class="mt-3">Nomor WhatsApp</label>
-        <input id="nomorWA" class="form-control" type="text">
-
-        <label class="mt-3">Jenis Kelamin</label>
-        <input id="jenisKelamin" class="form-control" type="text">
-
-        <label class="mt-3">Nomor Kelas</label>
-        <input id="nomorKelas" class="form-control" type="text">
-
-        <label class="mt-3">Nama Mentor</label>
-        <input id="namaMentor" class="form-control" type="text">
+        <label class="mt-3 text-center fw-bold">Nomor WhatsApp</label>
+        <input id="nomorWA" class="form-control text-center" type="text" readonly>
+        
+        <label class="mt-3 text-center fw-bold">Jenis Kelamin</label>
+        <input id="jenisKelamin" class="form-control text-center" type="text" readonly>
+        
+        <label class="mt-3 text-center fw-bold">Nomor Kelas</label>
+        <input id="nomorKelas" class="form-control text-center" type="text" readonly>
+        
+        <label class="mt-3 text-center fw-bold">Nama Mentor</label>
+        <input id="namaMentor" class="form-control text-center" type="text" readonly>
 
         <button id="resetBtn" class="btn btn-secondary mt-3">Reset Pilihan</button>
         <button id="submitBtn" class="btn btn-primary mt-2">Lanjut Isi di Google Form</button>
